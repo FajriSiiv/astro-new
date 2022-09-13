@@ -1,0 +1,18 @@
+---
+
+  export interface Props {
+    heading?: string;
+    text?: string;
+    showExtra?: boolean;
+  }
+
+  const { text = "Astro text from props", heading = "Heading from props Astro", showExtra = false } = Astro.props as Props;
+
+---
+
+<h1>{heading}</h1>
+<p>{text}</p>
+
+{showExtra && <>
+  <p>Extra large </p>
+</> }

@@ -1,0 +1,26 @@
+---
+  import Card from "./Card.astro";
+
+  const featuresData = [
+    { title: "Zero to Astro", body: "Astro rendered good" },
+    { title: "The power of Astro", body: "Astro power good" },
+    { title: "Lazy-loading Astro", body: "Astro lazy loading won\'t compare any framework" }
+  ]
+
+
+
+---
+
+<div class="features">
+  {featuresData.map(feature => (
+  <Card dark={true} title={feature.title} body={feature.body} />
+  ))}
+</div>
+
+
+<style>
+  .features {
+    margin-top: 100px;
+    padding: 0 10px;
+  }
+</style>
